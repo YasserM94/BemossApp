@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conLayout_lighting_device"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_all_app"
+    tools:context=".mainActivities.lighting.LightingDeviceActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_lighting_device_widget_device_status_bg"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_lighting_device_widget_device_status_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Living Room Light"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_lighting_device_widget_device_status_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:text="Status:      "
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_lighting_device_widget_device_picture_base"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_device_bulb_on1" />
+
+        <ImageView
+            android:id="@+id/img_lighting_device_widget_device_picture"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_lighting_device_widget_device_picture_base"
+            app:layout_constraintEnd_toEndOf="@+id/img_lighting_device_widget_device_picture_base"
+            app:layout_constraintStart_toStartOf="@+id/img_lighting_device_widget_device_picture_base"
+            app:layout_constraintTop_toTopOf="@+id/img_lighting_device_widget_device_picture_base"
+            app:srcCompat="@drawable/icon_device_bulb_on2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_lighting_device_widget_device_controls_bg"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayout_lighting_device_widget_device_status_bg">
+
+        <TextView
+            android:id="@+id/tv_lighting_device_widget_device_controls_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Device Controls"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_lighting_device_widget_device_controls_off"
+            android:layout_width="78dp"
+            android:layout_height="42dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="Off"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lighting_device_widget_device_controls_title" />
+
+        <Button
+            android:id="@+id/btn_lighting_device_widget_device_controls_on"
+            android:layout_width="78dp"
+            android:layout_height="42dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="On"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_lighting_device_widget_device_controls_off"
+            app:layout_constraintEnd_toStartOf="@+id/btn_lighting_device_widget_device_controls_off"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_lighting_device_widget_device_controls_off" />
+
+        <Button
+            android:id="@+id/btn_lighting_device_widget_device_controls_timer"
+            android:layout_width="78dp"
+            android:layout_height="42dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="Timer"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_lighting_device_widget_device_controls_off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_lighting_device_widget_device_controls_off"
+            app:layout_constraintTop_toTopOf="@+id/btn_lighting_device_widget_device_controls_off" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_lighting_device_widget_color_brightness_bg"
+        android:layout_width="0dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayout_lighting_device_widget_device_controls_bg">
+
+        <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+            android:id="@+id/hueColorPickerSeekBarHue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            app:hslColoringMode="pure"
+            app:hslMode="hue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lighting_device_widget_device_color_title" />
+
+
+        <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+            android:id="@+id/hueColorPickerSeekBarLightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            app:hslColoringMode="pure"
+            app:hslMode="lightness"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hueColorPickerSeekBarHue"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_lighting_device_widget_device_color_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Color And Brightness"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_lighting_device_widget_scenes_bg"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayout_lighting_device_widget_color_brightness_bg">
+
+        <TextView
+            android:id="@+id/tv_lighting_device_widget_device_scene_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Scenes"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_lighting_device_widget_device_scene_btn1"
+            android:layout_width="80dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="Diner"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_lighting_device_widget_device_scene_btn2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lighting_device_widget_device_scene_title" />
+
+        <Button
+            android:id="@+id/btn_lighting_device_widget_device_scene_btn2"
+            android:layout_width="80dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="Night"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lighting_device_widget_device_scene_title" />
+
+        <Button
+            android:id="@+id/btn_lighting_device_widget_device_scene_btn3"
+            android:layout_width="80dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="Arctic"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lighting_device_widget_device_scene_title" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5013193" />
+
+        <Button
+            android:id="@+id/btn_lighting_device_widget_device_scene_btn4"
+            android:layout_width="80dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="Spring"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_lighting_device_widget_device_scene_btn3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lighting_device_widget_device_scene_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

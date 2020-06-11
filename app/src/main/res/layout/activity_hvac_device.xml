@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_all_app"
+    tools:context=".mainActivities.hvac.HVAcDeviceActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_hvac_device_widget_indoor_temperature_bg"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_hvac_device_widget_device_picture"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_device_thermostat_on" />
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_indoor_temperature_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Temperature"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_indoor_temperature_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="21℃"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_hvac_device_widget_thermostat_mode_bg"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayout_hvac_device_widget_indoor_temperature_bg">
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_thermostat_mode_heat"
+            android:layout_width="96dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:gravity="center"
+            android:text="🔥Heat"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_hvac_device_widget_thermostat_mode_cold"
+            app:layout_constraintEnd_toStartOf="@+id/btn_hvac_device_widget_thermostat_mode_cold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_hvac_device_widget_thermostat_mode_cold" />
+
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_thermostat_mode_off"
+            android:layout_width="96dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:gravity="center"
+            android:text="Off"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_hvac_device_widget_thermostat_mode_cold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_hvac_device_widget_thermostat_mode_cold"
+            app:layout_constraintTop_toTopOf="@+id/btn_hvac_device_widget_thermostat_mode_cold" />
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_thermostat_mode_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Thermostat Mode"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_thermostat_mode_cold"
+            android:layout_width="96dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:gravity="center"
+            android:text="❄Cold"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hvac_device_widget_thermostat_mode_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_hvac_device_widget_cold_setPoint_bg"
+        android:layout_width="116dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayout_hvac_device_widget_thermostat_mode_bg">
+
+        <View
+            android:id="@+id/div_hvac_device_widget_cold_setPoint_divider"
+            android:layout_width="1dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="12dp"
+            android:background="#eaeaea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_cold_setPoint_up"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/selector_up_down_button"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/div_hvac_device_widget_cold_setPoint_divider"
+            app:layout_constraintEnd_toStartOf="@+id/div_hvac_device_widget_cold_setPoint_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/div_hvac_device_widget_cold_setPoint_divider" />
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_cold_setPoint_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="24℃"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/div_hvac_device_widget_cold_setPoint_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hvac_device_widget_cold_setPoint_title" />
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_cold_setPoint_down"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/selector_up_down_button"
+            android:gravity="center"
+            android:text="–"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/div_hvac_device_widget_cold_setPoint_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/div_hvac_device_widget_cold_setPoint_divider"
+            app:layout_constraintTop_toTopOf="@+id/div_hvac_device_widget_cold_setPoint_divider" />
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_cold_setPoint_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Cold Setpoint"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_hvac_device_widget_heat_setPoint_bg"
+        android:layout_width="116dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/conLayout_hvac_device_widget_cold_setPoint_bg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayout_hvac_device_widget_thermostat_mode_bg">
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_heat_setPoint_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="8℃"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/div_hvac_device_widget_heat_setPoint_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hvac_device_widget_heat_setPoint_title" />
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_heat_setPoint_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Heat Setpoint"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_heat_setPoint_up"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/selector_up_down_button"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/div_hvac_device_widget_heat_setPoint_divider"
+            app:layout_constraintEnd_toStartOf="@+id/div_hvac_device_widget_heat_setPoint_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/div_hvac_device_widget_heat_setPoint_divider" />
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_heat_setPoint_down"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/selector_up_down_button"
+            android:gravity="center"
+            android:text="–"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/div_hvac_device_widget_heat_setPoint_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/div_hvac_device_widget_heat_setPoint_divider"
+            app:layout_constraintTop_toTopOf="@+id/div_hvac_device_widget_heat_setPoint_divider" />
+
+        <View
+            android:id="@+id/div_hvac_device_widget_heat_setPoint_divider"
+            android:layout_width="1dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="12dp"
+            android:background="#eaeaea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_hvac_device_widget_allow_override_bg"
+        android:layout_width="116dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/conLayout_hvac_device_widget_cold_setPoint_bg"
+        app:layout_constraintTop_toBottomOf="@+id/conLayout_hvac_device_widget_thermostat_mode_bg">
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_allow_override_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Allow Override"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_allow_override_yes"
+            android:layout_width="76dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:gravity="center"
+            android:text="Yes"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_hvac_device_widget_allow_override_no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hvac_device_widget_allow_override_title" />
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_allow_override_no"
+            android:layout_width="76dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:gravity="center"
+            android:text="No"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout_hvac_device_widget_fan_mode_bg"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_device_mov"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayout_hvac_device_widget_cold_setPoint_bg">
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_fan_mode_on"
+            android:layout_width="96dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="On"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_hvac_device_widget_fan_mode_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hvac_device_widget_fan_mode_title" />
+
+        <Button
+            android:id="@+id/btn_hvac_device_widget_fan_mode_auto"
+            android:layout_width="96dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/selector_options_button_blue"
+            android:text="🍃Auto"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_hvac_device_widget_fan_mode_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hvac_device_widget_fan_mode_title" />
+
+        <TextView
+            android:id="@+id/tv_hvac_device_widget_fan_mode_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Fan Mode"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

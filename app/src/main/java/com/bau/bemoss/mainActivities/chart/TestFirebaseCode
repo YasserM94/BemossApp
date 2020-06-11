@@ -1,0 +1,46 @@
+
+
+    lateinit var mAuth: FirebaseAuth
+    lateinit var database: FirebaseDatabase
+    lateinit var myRef: DatabaseReference
+    lateinit var colorTempratuer: String
+    lateinit var nameTempratuer: String
+    lateinit var listTempratuer: String
+
+    fun getTemperatuerDataFromFirebase() {
+
+        mAuth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
+        myRef = database.getReference("Charts/Chart1")
+        myRef.addValueEventListener(object :ValueEventListener {
+            override fun onDataChange(dataSnapshot:DataSnapshot) {
+                if (dataSnapshot.hasChild("color")) { // run some code
+                    colorTempratuer =
+                            dataSnapshot.child("color").value.toString()
+
+                } else {
+                    colorTempratuer = defaultColor
+                }
+                if (dataSnapshot.hasChild("list")) {
+                    listTempratuer = dataSnapshot.child("list").value.toString()
+                } else {
+                    listTempratuer = "1-2-3"
+                }
+                if (dataSnapshot.hasChild("name")) {
+                    nameTempratuer = dataSnapshot.child("name").value.toString()
+                } else {
+                    nameTempratuer = "Tempratuer"
+                }
+                var s = confertStringToList(listTempratuer)
+                setDataForTemperature()
+
+            }
+
+            override fun onCancelled(error:DatabaseError) {
+                // Failed to read value
+                var x = 0
+            }
+        })
+    }
+
+

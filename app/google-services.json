@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "865894909056",
+    "firebase_url": "https://bemoss-e8288.firebaseio.com",
+    "project_id": "bemoss-e8288",
+    "storage_bucket": "bemoss-e8288.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865894909056:android:fce04e4a321d6be1809265",
+        "android_client_info": {
+          "package_name": "com.bau.bemoss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865894909056-2rokfbv0rg73vn8aes4eibg59snabhsn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsp0kudsmrLlGejFHI_uO8pSZRbWGwZCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865894909056-2rokfbv0rg73vn8aes4eibg59snabhsn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
